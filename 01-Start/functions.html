@@ -1,0 +1,34 @@
+<script>
+
+
+    function ourReusableFunction(){
+
+        console.log("hey this is a function!")
+    }
+
+    ourReusableFunction();
+
+    //passing arguments
+
+    function exampleFunction(numOne,numTwo){
+
+            var result = numOne + numTwo;
+
+            return result;
+    }
+
+    var additionResult = exampleFunction(1,2);
+
+
+
+//the function does not return however it alters the global variable
+
+    var globalVar = 0;
+
+    function addingGlobal()
+    {
+        globalVar += 1;
+    }
+
+
+</script>
