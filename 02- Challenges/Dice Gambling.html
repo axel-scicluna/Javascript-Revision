@@ -1,0 +1,59 @@
+<script>
+
+/*
+
+Dice Gambling
+Create a function that takes an array consisting of dice rolls from 1-6. Return the sum of your rolls with the following conditions:
+
+If a 1 is rolled, that is bad luck. The next roll counts as 0.
+If a 6 is rolled, that is good luck. The next roll is multiplied by 2.
+The array length will always be 3 or higher.
+Examples
+rolls([1, 2, 3]) ➞ 4
+// The second roll, 2, counts as 0 as a result of rolling 1.
+
+rolls([2, 6, 2, 5]) ➞ 17
+// The 2 following the 6 was multiplied by 2.
+
+rolls([6, 1, 1]) ➞ 8
+// The first roll makes the second roll worth 2, but the
+// second roll was still 1 so the third roll doesn't count.
+
+*/
+
+function rolls(arr) {
+	var lucky = false;
+	var unlucky = false;
+	
+	var sum= 0;
+
+	for(i = 0;i <= arr.length-1;i++)
+		{
+				if(lucky== true)
+				{
+					sum += arr[i] * 2;
+				}else if(unlucky == true)
+					{
+						
+					}else
+						{
+							sum+= arr[i];
+						}
+			lucky = false;
+			unlucky = false;
+			
+			if(arr[i] == 6)
+				{
+					lucky = true;
+					
+					
+				}else if(arr[i] == 1)
+					{
+						unlucky= true;
+						
+					}
+
+		}
+	return sum;
+}
+</script>
